@@ -1,0 +1,8 @@
+- name: var files
+  hosts: localhost
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: overriding
+    ansible.builtin.debug:
+      msg: This course is {{Course}} and trainer is {{Trainer}}
