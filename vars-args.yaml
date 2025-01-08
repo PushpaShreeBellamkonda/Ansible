@@ -5,4 +5,4 @@
     ansible.builtin.debug:
       msg: "hello from {{Person}}"
 
-#ansible-playbook -i inventory.ini -e ansible_user=ec2-user --private-key="/home/ec2-user/mykeys.pem" vars-args.yaml -vvv -e "Person=Pushpa"
+#ansible-playbook -i inventory.ini -e ansible_user=ec2-user --private-key="/home/ec2-user/mykeys.pem" vars-args.yaml -vvv -e "Person=Pushpa" (run like this)
