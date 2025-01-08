@@ -1,0 +1,16 @@
+- name: overriding
+  hosts: localhost
+  vars:
+    Course: "Ansible"
+    Trainer: "Pushpa"
+  tasks:
+  - name: print information
+    vars:
+      Course: "Terraform"
+      Trainer: "Shree"
+    ansible.builtin.debug:
+      msg: This is overriding method , trainer is {{Trainer}} for the course {{Course}}
+
+  - name: print information
+    ansible.builtin.debug:
+      msg: This is without overriding,  trainer is {{Trainer}} for the course {Course}}
