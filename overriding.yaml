@@ -13,4 +13,4 @@
 
   - name: print information
     ansible.builtin.debug:
-      msg: This is without overriding,  trainer is {{Trainer}} for the course {Course}}
+      msg: This is without overriding,  trainer is {{Trainer}} for the course {{Course}}
