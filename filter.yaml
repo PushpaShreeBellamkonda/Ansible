@@ -41,6 +41,23 @@
     ansible.builtin.debug:
       msg: "maximum age is {{ages | max }}"
 
+
+- name: convert dic to item
+  hosts: localhost
+  vars:
+    my_dic:
+      course: ansible
+      Trainer: Pushpa
+      Duration: 6 months
+  tasks:
+  - name: before convertion
+    ansible.builtin.debug:
+      msg: "before convertion: {{my_dic}}"
+
+  - name: after convertion
+    ansible.builtin.debug:
+      msg: "after convertion: {{my_dic | dict2items}}"
+
   
 
 
