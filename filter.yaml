@@ -23,6 +23,25 @@
     ansible.builtin.debug:
       msg: "hello {{Greetings | upper}}"
 
+- name: min and max ages
+  hosts: localhost
+  vars:
+    ages: [12,45,66,7]
+  tasks:
+  - name: min ages
+    ansible.builtin.debug:
+      msg: "minimum age is {{ages | min }}"
+
+- name: min and max ages
+  hosts: localhost
+  vars:
+    ages: [12,45,66,7]
+  tasks:
+  - name: max ages
+    ansible.builtin.debug:
+      msg: "minimum age is {{ages | max }}"
+
+  
 
 
 
